@@ -36,7 +36,7 @@ const Landing = () => {
       <section className="hero-section" id="hero-section" style={banner ? { backgroundImage: `linear-gradient(225deg, rgba(15,23,42,0.9), rgba(15,23,42,0.4)), url(${banner})` } : {}}>
         <div className="hero-content">
           <div className="hero-badge">✨ Season's Favorites</div>
-          <h1 className="hero-title">Shop<span className="hero-accent">EZ</span></h1>
+          <h1 className="hero-title">Smart<span className="hero-accent">Bridge</span></h1>
           <p className="hero-subtitle">Discover curated collections from top global brands. Experience luxury fashion with seamless delivery and premium service.</p>
           <div className="hero-actions">
             <Link to="/products" className="btn btn-primary btn-lg" id="shop-now-btn">

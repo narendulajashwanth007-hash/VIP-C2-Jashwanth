@@ -16,10 +16,23 @@ const AdminEditProduct = () => {
     price: '',
     discount: '0'
   });
-  const [categories, setCategories] = useState(['Men', 'Women', 'Kids', 'Accessories', 'Footwear']);
+  const [categories, setCategories] = useState(['Electronics', 'Fashion', 'Home', 'Beauty', 'Sports']);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
+
+  const categorySizes = {
+    'Fashion':     'S, M, L, XL, XXL',
+    'Sports':      'S, M, L, XL, XXL',
+    'Men':         'S, M, L, XL, XXL',
+    'Women':       'XS, S, M, L, XL, XXL',
+    'Kids':        '2-3Y, 4-5Y, 6-7Y, 8-9Y, 10-11Y, 12-13Y',
+    'Footwear':    '5, 6, 7, 8, 9, 10, 11',
+    'Beauty':      '30ml, 50ml, 100ml, 200ml',
+    'Home':        'Small, Medium, Large',
+    'Electronics': 'Standard',
+    'Accessories': 'One Size',
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -57,7 +70,16 @@ const AdminEditProduct = () => {
   }, [id]);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    if (name === 'category') {
+      setFormData({
+        ...formData,
+        category: value,
+        sizesStr: categorySizes[value] ?? formData.sizesStr
+      });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
   };
 
   const handleSubmit = async (e) => {

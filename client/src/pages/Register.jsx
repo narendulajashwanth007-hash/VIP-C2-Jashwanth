@@ -46,7 +46,7 @@ const Register = () => {
         <div className="auth-header">
           <span className="auth-icon">🎉</span>
           <h1>Create Account</h1>
-          <p>Join ShopEZ for the best shopping experience</p>
+          <p>Join ShopEZ E-commerce for the best shopping experience</p>
         </div>
 
         {error && <div className="alert alert-error">{error}</div>}

@@ -1,7 +1,7 @@
 {
   "name": "shopez-server",
   "version": "1.0.0",
-  "description": "ShopEZ E-Commerce Backend Server",
+  "description": "E-commerce Application ShopEZ Backend Server",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

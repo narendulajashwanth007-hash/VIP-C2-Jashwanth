@@ -64,7 +64,17 @@ const ProductCard = ({ product, onViewDetails }) => {
   return (
     <div className="product-card" id={`product-${product._id}`}>
       <div className="product-image-wrapper">
-        <img src={product.mainImg} alt={product.title} className="product-image" loading="lazy" onClick={() => onViewDetails(product)} />
+        <img
+          src={product.mainImg}
+          alt={product.title}
+          className="product-image"
+          loading="lazy"
+          onClick={() => onViewDetails(product)}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = `https://placehold.co/500x500/e5e9f0/2c4152?text=${encodeURIComponent(product.title.split(' ').slice(0,2).join(' '))}`;
+          }}
+        />
         <button 
           className={`wishlist-btn ${wishlisted ? 'active' : ''}`} 
           onClick={handleWishlist}

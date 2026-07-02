@@ -51,7 +51,15 @@ const ProductModal = ({ product, onClose }) => {
         <div className="modal-body">
           <div className="modal-images">
             <div className="modal-main-image-wrapper">
-              <img src={images[currentImg]} alt={product.title} className="modal-main-image" />
+              <img
+                src={images[currentImg]}
+                alt={product.title}
+                className="modal-main-image"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = `https://placehold.co/500x500/e5e9f0/2c4152?text=${encodeURIComponent(product.title.split(' ').slice(0,2).join(' '))}`;
+                }}
+              />
             </div>
             {images.length > 1 && (
               <div className="modal-thumbnails-premium">

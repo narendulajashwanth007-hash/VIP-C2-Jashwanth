@@ -38,7 +38,7 @@ app.use('/api/admin', require('./routes/adminRoutes'));
 
 // Health check
 app.get('/', (req, res) => {
-  res.json({ success: true, message: 'ShopEZ API is running' });
+  res.json({ success: true, message: 'ShopEZ E-commerce API is running' });
 });
 
 // Error handler

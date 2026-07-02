@@ -25,7 +25,7 @@ const AdminDashboard = () => {
     <div className="admin-page" id="admin-dashboard">
       <div className="admin-header">
         <h1>Admin Dashboard</h1>
-        <p>Welcome to the ShopEZ admin control panel</p>
+        <p>Welcome to the E-commerce Application ShopEZ admin control panel</p>
       </div>
 
       <div className="admin-layout">

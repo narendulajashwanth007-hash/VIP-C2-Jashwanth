@@ -8,7 +8,7 @@ const Footer = () => {
           <h3 className="footer-title">
             <span className="logo-icon">🛒</span> Shop<span className="logo-accent">EZ</span>
           </h3>
-          <p className="footer-desc">Your one-stop destination for trendy fashion and accessories. Shop smart, shop easy with ShopEZ.</p>
+          <p className="footer-desc">Your one-stop destination for trendy fashion and accessories. Shop smart, shop easy with E-commerce Application ShopEZ.</p>
         </div>
 
         <div className="footer-section">
@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Contact Us</h4>
           <ul className="footer-links">
-            <li>📧 support@shopez.com</li>
+          <li>📧 support@shopez.com</li>
             <li>📞 +91 98765 43210</li>
             <li>📍 Mumbai, India</li>
           </ul>
@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} ShopEZ. All rights reserved. Built with ❤️</p>
+        <p>&copy; {new Date().getFullYear()} E-commerce Application ShopEZ. All rights reserved. Built with ❤️</p>
       </div>
     </footer>
   );
